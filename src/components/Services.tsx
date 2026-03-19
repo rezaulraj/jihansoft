@@ -155,15 +155,13 @@ export default function Services() {
 
         <svg
           className="absolute top-0 left-0 w-full h-full opacity-10"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+          xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern
               id="grid"
               width="40"
               height="40"
-              patternUnits="userSpaceOnUse"
-            >
+              patternUnits="userSpaceOnUse">
               <path
                 d="M 40 0 L 0 0 0 40"
                 fill="none"
@@ -181,8 +179,7 @@ export default function Services() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
+          className="text-center mb-16">
           <span className="inline-block px-4 py-2 rounded-full bg-[#00D5DE]/10 text-[#0099CF] font-medium mb-4">
             Our Services
           </span>
@@ -202,8 +199,7 @@ export default function Services() {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
-        >
+          className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service, index) => {
             const shapeGroup =
               backgroundShapes[index % backgroundShapes.length];
@@ -214,17 +210,14 @@ export default function Services() {
                 variants={itemVariants}
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
-                className="group relative"
-              >
-                <div className="relative bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+                className="group relative">
+                <div className="relative bg-white rounded-2xl p-8 cursor-pointer shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
                   <div className="absolute inset-0 opacity-30">
                     <div
-                      className={`absolute ${shapeGroup.positions[0]} ${shapeGroup.sizes[0]}`}
-                    >
+                      className={`absolute ${shapeGroup.positions[0]} ${shapeGroup.sizes[0]}`}>
                       <svg
                         viewBox="0 0 100 100"
-                        className="w-full h-full text-[#00D5DE] fill-current"
-                      >
+                        className="w-full h-full text-[#00D5DE] fill-current">
                         {shapeGroup.type === "circle" && (
                           <circle cx="50" cy="50" r="40" />
                         )}
@@ -244,12 +237,10 @@ export default function Services() {
                     </div>
 
                     <div
-                      className={`absolute ${shapeGroup.positions[1]} ${shapeGroup.sizes[1]}`}
-                    >
+                      className={`absolute ${shapeGroup.positions[1]} ${shapeGroup.sizes[1]}`}>
                       <svg
                         viewBox="0 0 100 100"
-                        className="w-full h-full text-[#0099CF] fill-current rotate-45"
-                      >
+                        className="w-full h-full text-[#0099CF] fill-current rotate-45">
                         {shapeGroup.type === "circle" && (
                           <circle cx="50" cy="50" r="40" />
                         )}
@@ -269,12 +260,10 @@ export default function Services() {
                     </div>
 
                     <div
-                      className={`absolute ${shapeGroup.positions[2]} ${shapeGroup.sizes[2]}`}
-                    >
+                      className={`absolute ${shapeGroup.positions[2]} ${shapeGroup.sizes[2]}`}>
                       <svg
                         viewBox="0 0 100 100"
-                        className="w-full h-full text-[#0D2E62] fill-current -rotate-12"
-                      >
+                        className="w-full h-full text-[#0D2E62] fill-current -rotate-12">
                         {shapeGroup.type === "circle" && (
                           <circle cx="50" cy="50" r="40" />
                         )}
@@ -297,8 +286,7 @@ export default function Services() {
                   <div className="relative z-10 flex items-start gap-6">
                     <div className="flex-shrink-0">
                       <div
-                        className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.color} p-4 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}
-                      >
+                        className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.color} p-4 shadow-lg group-hover:scale-110 group-hover:rotate-3 transition-all duration-300`}>
                         <div className="relative w-full h-full">
                           <Image
                             src={service.icon}
@@ -321,8 +309,7 @@ export default function Services() {
                         {service.features.map((feature, idx) => (
                           <span
                             key={idx}
-                            className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full hover:bg-[#00D5DE]/10 hover:text-[#0099CF] transition-colors duration-200"
-                          >
+                            className="px-3 py-1 bg-gray-100 text-gray-600 text-sm rounded-full hover:bg-[#00D5DE]/10 hover:text-[#0099CF] transition-colors duration-200">
                             {feature}
                           </span>
                         ))}
